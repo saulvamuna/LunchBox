@@ -1,0 +1,69 @@
+{% include 'Inc/header.html' %}
+
+<div class="ui container">
+    <div class="login-registrar admin">
+        <h1>Registrar estudiante</h1>
+        <form action="" method="POST" enctype="multipart/form-data" class="ui form">
+            {% csrf_token %}
+            <div class="two fields">
+                <div class="field">
+                    <label for="">Nombres</label>
+                    <input type="text" name="Nombres" id="" required>
+                </div>
+                <div class="field">
+                    <label for="">Apellidos</label>
+                    <input type="text" name="Apellidos" id="" required>
+                </div>
+            </div>
+            <div class=" two fields">
+                <div class="field">
+                    <label for="">Grado</label>
+                    <input type="text" name="Grado" id="" required>
+                </div>
+                <div class="field">
+                    <label for="">Fecha de nacimiento</label>
+                    <input type="date" name="Fecha_nacimiento" id="" required>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label for="">Numero de identificación</label>
+                    <input type="text" name="N_identidad" id="" required>
+                </div>
+                <div class="field">
+                    <label for="">Tipo de identificación</label>
+                    <select name="T_identidad" id="">
+                        <option>Seleccione</option>
+                        <option value="Tarjeta de identidad">T.I</option>
+                        <option value="N° matricula">Matricula</option>
+                    </select>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label for="">Foto</label>
+                    <div class="input-file">
+                        <p> <i class="hand point right icon"></i> Seleccionar foto</p>
+                        <input type="file" name="FotoEstudiante" id="imagen" onchange="" class="btn-file">
+                    </div>
+                    <div class="preliminar login">
+                        <img src="" alt="" id="FotoEstudiante">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="">Id</label>
+                    <input type="text" name="Usuario_Id" id="" required>
+                </div>
+            </div>
+            <button class="ui button agregrar" type="submit" name="btnEnviar">Registrar estudiante</button>
+
+            {% if messages %}
+            {% for mensaje in messages %}
+            <h1 style="color: red;"> {{ mensaje }} </h1>
+            {% endfor %}
+            {% endif %}
+        </form>
+    </div>
+</div>
+
+{% include 'Inc/footer.html' %}

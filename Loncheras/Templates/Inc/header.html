@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href='{% static "css/semantic.css" %}' />
+  <link rel="stylesheet" href='{% static "css/style.css" %}' />
+  <script src='{% static "js/jquery.min.js" %}'></script>
+  <script src='{% static "js/semantic.js" %}'></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="ui sidebar vertical left menu overlay visible" style="overflow: visible !important;">
+    <div class="item logo">
+      <img src="https://image.flaticon.com/icons/svg/866/866218.svg" /><img
+        src="https://image.flaticon.com/icons/svg/866/866218.svg" style="display: none" />
+    </div>
+    <div class="ui accordion">
+      <div class="title item">Usuarios<i class="dropdown icon"></i> </div>
+      <div class="content">
+        <a class="item" href="/Usuario">Listado de Usuarios</a>
+        <a class="item" href="/Usuario/Insertar">Registrar Usuarios</a>
+      </div>
+
+      <div class="title item"><i class="dropdown icon"></i> Estudiantes</div>
+      <div class="content">
+        <a class="item" href="/Estudiante">Listado de Estudiantes </a>
+        <a class="item" href="/Estudiante/Insertar">Registro de Estudiantes </a>
+      </div>
+
+      <a class="item">
+        <b>Perfil</b>
+      </a>
+    </div>
+    <div class="ui dropdown item displaynone">
+      <z>Usuarios</z>
+      <i class="icon demo-icon heart icon-heart"></i>
+
+      <div class="menu">
+        <div class="header">Usuarios</div>
+        <div class="ui divider"></div>
+        <a class="item" href="/Usuario">Listado de Usuarios </a>
+        <a class="item" href="/Usuario/Insertar">Registro de Usuarios </a>
+      </div>
+    </div>
+    <div class="ui dropdown item displaynone">
+      <z>Estudiantes</z>
+      <i class="icon demo-icon world icon-globe"></i>
+
+      <div class="menu">
+        <div class="header">Estudiantes</div>
+        <div class="ui divider"></div>
+        <a class="item" href="/Estudiante">Listado de Estudiantes</a>
+        <a class="item" href="/Estudiante/Insertar">Registro de Estudiantes</a>
+      </div>
+    </div>
+    <div class="ui dropdown item displaynone">
+      <z>Perfil</z>
+      <i class="icon demo-icon icon-params alarm"></i>
+
+      <div class="menu">
+        <div class="header">Perfil</div>
+        <div class="ui divider"></div>
+        <a class="item" href="#">Mi perfil </a>
+      </div>
+    </div>
+  </div>
+  <div class="pusher">
+    <div class="ui menu asd borderless" style="border-radius: 0 !important; border: 0; margin-left: 260px;">
+      <a class="item openbtn">
+        <i class="icon content"></i>
+      </a>
+      <a class="item">Cargar nombre del login </a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui primary button">Login</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pusher">
+    <div class="asd borderless" style="border-radius: 0 !important; border: 0; margin-left: 260px;">

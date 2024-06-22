@@ -1,0 +1,58 @@
+{% include 'Inc/header.html' %}
+
+<div class="ui container">
+  <h1>Esto es la vista del Usuario Listado</h1>
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Nombre Usuario</th>
+        <th>Clave</th>
+        <th>Foto Usuario</th>
+        <th>Rol Usuario</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in usuario %}
+      <tr>
+        <td>{{ user.Usuario }}</td>
+        <td>{{ user.Clave }}</td>
+        <td><img src="{{ user.FotoUsuario.url }}" /></td>
+        <td>{{ user.Rol }}</td>
+        <td>
+          <a href="#" onclick="borrar('{{ c.Id }}')"><i class="trash alternate online icon"></i></a>
+          <i class="pencil alternate icon"></i>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5">No hay usuarios disponibles</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function borrar() {
+    swal({
+      title: "¿Estas Seguro?",
+      text: "Una vez eliminado, no podras recuperar esa información",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          location.href = " "
+          swal("Poof! Your imaginary file has been deleted!", {
+            icon: "success",
+          });
+        } else {
+          swal("La información se salvo");
+        }
+      });
+  }
+</script>
+
+{% include 'Inc/footer.html' %}

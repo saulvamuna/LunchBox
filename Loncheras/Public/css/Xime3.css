@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navbar-color--: #272727;
+  --text-color--: #fbfbfb;
+  --body-color--: #dceafc;
+}
+
+body {
+  background: var(--body-color--);
+  background-image: url("/img/Fondo1.jpg");
+}
+
+/* ========== MENU ========= */
+.ui.segment {
+  border-radius: 0;
+  margin-bottom: 0;
+  height: 60px;
+  background: var(--navbar-color--);
+}
+
+.ui.inverted.secondary.menu {
+  margin-top: -0.9%;
+}
+
+.ui.inverted.secondary.menu .item img {
+  margin-right: 20px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.right.menu .echo {
+  margin-left: 7px;
+  font-size: 18px;
+  color: var(--navbar-color--);
+  background: var(--text-color--);
+  padding: 2px 6px 2px 6px;
+  border-radius: 50% 50% 50% 50%;
+  font-weight: 600;
+}
+
+/* ========== IMAGEN ========= */
+
+
+/* ========== IMAGEN LINK ========= */
+.imagen-link {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 8%;
+}
+
+.imagen-link .imagen-l {
+  width: 30%;
+  margin: 20px;
+}
+
+.imagen-link .imagen-l img {
+  width: 25rem;
+  height: 32rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.imagen-link .imagen-l a {
+  display: flex;
+  position: absolute;
+  width: 25rem;
+  height: 32rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: -32.4rem;
+  padding: 30px;
+  background: var(--navbar-color--);
+  color: var(--text-color--);
+  font-size: 15px;
+}
+
+.imagen-link .imagen-l a {
+  opacity: 0;
+}
+
+.imagen-link .imagen-l a:hover {
+  opacity: .8;
+}
+
+/* ========== LOGIN ========= */
+.ui.container.login {
+  display: flex;
+  justify-content: center;
+}
+
+.ui.container.login h1 {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+}
+
+.login-iniciar {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  padding: 5rem;
+  margin-top: 4rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 10px 10px 30px #c9c9c9,
+    -20px -20px 60px #ffffff;
+}
+
+.login-iniciar form {
+  width: 100%;
+}
+
+.login-registrar {
+  width: 45%;
+  padding: 3rem;
+  margin-top: 4rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 10px 10px 30px #c9c9c9,
+    -20px -20px 60px #ffffff;
+}
+
+.ui.button.agregrar.inicia {
+  margin: 3rem 0 0 9rem;
+}
+
+.ui.button.agregrar.registrar {
+  margin: 2rem 0 0 11rem;
+}
+
+.login-registrar.admin {
+  width: 100%;
+}
+
+/* ========== PRELIMINAR ========= */
+div.input-file {
+  position: relative;
+  width: 40%;
+  height: 36px;
+  border-radius: 3px;
+  padding: 1.5% 0 0 2%;
+  border: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+div.input-file:hover {
+  background: var(--navbar-color--);
+  color: var(--text-color--);
+}
+
+input.btn-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.preliminar {
+  width: 50%;
+  height: 40.5vh;
+  float: right;
+  margin: -6% 30px 0 0;
+  border: 2px solid var(--sidebar-color);
+}
+
+.preliminar img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.preliminar.login {
+  height: 25vh;
+}
+
+.preliminar.login img {
+  height: 25vh;
+}
+
+.ui.button.agregrar {
+  background: var(--navbar-color--);
+  color: var(--text-color--);
+}
+
+.ui.button.agregrar:hover {
+  background: var(--botones-color--);
+  color: var(--navbar-color--);
+}
+
+/* ========== PERFIL ========= */
+.perfil {
+  display: flex;
+  width: 100%;
+}
+
+.foto {
+  width: 25rem;
+  height: 25rem;
+  margin: 5rem 2rem 0 3rem;
+  border-radius: 50%;
+}
+
+.imagen-perfil {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.infoPerfil {
+  background: var(--navbar-color--);
+  width: 50%;
+  margin: 5rem 0 0 5rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.infoPerfil .ui.form label {
+  color: var(--text-color--);
+}
+
+/* ========== Estudiante ========= */
+.ui.container.estudiante {
+  display: center;
+  align-items: center;
+  width: 80%;
+  padding: 3rem;
+  margin-top: 8rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 10px 10px 30px #c9c9c9,
+    -20px -20px 60px #ffffff;
+  font-family: 'DM Serif Display', serif;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 15px;
+}
+
+/* ========== Inventario ========= */
+.ui.container.inventario {
+  display: center;
+  align-items: center;
+  width: 80%;
+  padding: 3rem;
+  margin-top: 8rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 10px 10px 30px #c9c9c9,
+    -20px -20px 60px #ffffff;
+  font-family: 'DM Serif Display', serif;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 15px;
+}

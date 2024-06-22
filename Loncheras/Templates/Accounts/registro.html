@@ -1,0 +1,38 @@
+{% include 'Inc/header.html' %}
+
+<div class="ui container login">
+    <div class="login-registrar">
+      <h1>Registrarse</h1>
+      <form action="" method="POST" enctype="multipart/form-data" class="ui form">
+         {% csrf_token %}
+        <div class="two fields">
+          <div class="field">
+            <label for="">Usuario</label>
+            <input type="text" name="Usuario" id="" required>
+          </div>
+          <div class="field">
+            <label for="">Clave</label>
+            <input type="text" name="Clave" id="" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="">Foto</label>
+          <div class="input-file">
+            <input type="file" name="FotoUsuario" id="imagen" class="btn-file" accept="image/*" required>
+          </div>
+        </div>
+        <div class="field">
+          <input type="text" name="Rol" value="3" hidden>
+        </div>
+        <button class="ui button agregrar registrar" type="submit" name="btnEnviar">Registrarse</button>
+
+        {% if messages %}
+            {% for mensaje in messages %}
+            <h1 style="color: red;"> {{ mensaje }} </h1>
+            {% endfor %}
+            {% endif %}
+      </form>
+    </div>
+  </div>
+
+{% include 'Inc/footer.html' %}

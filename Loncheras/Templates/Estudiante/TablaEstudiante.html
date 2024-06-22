@@ -1,0 +1,79 @@
+{% include 'Inc/header.html' %}
+
+<div class="ui container estudiante">
+  <table class="ui celled large table fixed">
+    <thead>
+      <tr class="center aligned">
+        <th style="background-color: #ccffea" ;>Numero de identificación</th>
+        <th style="background-color: #ccffea" ;>Tipo de identificación</th>
+        <th style="background-color: #ccffea" ;>Nombres</th>
+        <th style="background-color: #ccffea" ;>Apellidos</th>
+        <th style="background-color: #ccffea" ;>Fecha Nacimiento</th>
+        <th style="background-color: #ccffea" ;>Edad</th>
+        <th style="background-color: #ccffea" ;>Grado</th>
+        <th style="background-color: #ccffea" ;>Fecha Ingreso</th>
+        <th style="background-color: #ccffea" ;>Foto Estudiante</th>
+        <th style="background-color: #ccffea" ;>ID Acudiente</th>
+        <th style="background-color: #ccffea" ;>ID Dieta</th>
+        <th style="background-color: #ccffea" ;>Acciones</th>
+        <!-- <th style="background-color: #CCFFEA" ;>Opciones</th> -->
+      </tr>
+    </thead>
+    <tbody class="center aligned">
+      {% for est in estudiante %}
+      <tr>
+        <td>{{ est.N_identidad }}</td>
+        <td>{{ est.T_identidad }}</td>
+        <td>{{ est.Nombres }}</td>
+        <td>{{ est.Apellidos }}</td>
+        <td>{{ est.Fecha_nacimiento }}</td>
+        <td>{{ est.Edad }}</td>
+        <td>{{ est.Grado }}</td>
+        <td>{{ est.F_ingreso }}</td>
+        <td>
+          <img
+            src="{{ est.FotoEstudiante }}"
+            style="max-width: 80px; max-heigth: 80px; border-radius: 30%"
+          />
+        </td>
+        <td>{{ est.Usuario_Id }}</td>
+        <td>{{ est.Id_dieta }}</td>
+        <td>
+          <a href="#" onclick="borrar('{{ est.N_identidad }}')"><i class="trash alternate online icon"></i></a>
+          <i class="pencil alternate icon"></i>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5">No hay usuarios disponibles</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function borrar(N_identidad) {
+    swal({
+      title: "¿Estas Seguro?",
+      text: "Una vez eliminado, no podras recuperar esta información",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("Poof! El estudiante fue eliminado", {
+            icon: "success",
+          }).then(() => {
+             location.href = "/Estudiante/Borrar/" + N_identidad;
+          });
+        } else {
+          swal("Uff! La información a sido salvada por poco");
+        }
+      });
+  }
+</script>
+
+
+{% include 'Inc/footer.html' %}
